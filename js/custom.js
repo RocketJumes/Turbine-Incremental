@@ -3,11 +3,11 @@ var abbrev = [ "k", "m", "b", "t", "Qa", "Qi", "Sx", "Sp", "Oc", "N", "Dc", "Ud"
 
 function checkSlider( event, ui ) {
 	var temp = ui.value;
-	if (ui.value > GameInstance.gameInfo.maxSteamInput) {
+	if (ui.value > Stuff.maxSteamInput) {
 		console.log('Wrong value on the slider');
-		$('#slider').slider('value',GameInstance.gameInfo.maxSteamInput);
-		temp = GameInstance.gameInfo.maxSteamInput;
-		$('#slider').slider('option','max',GameInstance.gameInfo.maxSteamInput);
+		$('#slider').slider('value',Stuff.maxSteamInput);
+		temp = Stuff.maxSteamInput;
+		$('#slider').slider('option','max',Stuff.maxSteamInput);
 	}
 	if (ui.value < 0) {
 		console.log('Wrong value on the slider');
