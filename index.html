@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Clicker Game</title>
+
+		<!-- BootStrap Css -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+		<!-- JQuery Css -->
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+		<!-- Awesome Font Css-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<!-- JQuery Alerts -->
+		<link rel="stylesheet" href="css/jquery-confirm.css">
+		<!-- Custom Stuff -->
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- JQuery Js -->
+		<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+		<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<!-- Slider Js -->
+		<script src="js/jssor.slider.min.js"></script>
+		<!-- BootStrap Js -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<!-- AES Js -->
+		<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/aes.js"></script>
+		<!-- JQuery Alerts -->
+		<script src="js/jquery-confirm.js"></script>
+		<!-- Custom Stuff -->
+		<script src="js/custom.js"></script>
+	</head>
+	<body>
+		<div id="row">
+			<div class="col-lg-2"></div>
+			<div class="col-lg-8" style="padding-top: 10px;">
+				<div>
+					<ul id="myTabs" class="nav nav-tabs" role="tablist">
+						<li role="presentation" class="active">
+							<a href="#mainGame" id="mainGame-tab" role="tab" data-toggle="tab" aria-controls="mainGame" aria-expanded="false">
+								Turbine Incremental       
+								<img src="icon.bmp" id="img-resize">
+							</a>
+						</li>
+						<li role="presentation" class="">
+							<a href="#upgrades" id="upgrades-tab" role="tab" data-toggle="tab" aria-controls="upgrades" aria-expanded="true">
+								Upgrades       
+								<img src="upgrades.bmp" id="img-resize">
+							</a>
+						</li>
+						<li role="presentation" class="">
+							<a href="#prestige" id="prestige-tab" role="tab" data-toggle="tab" aria-controls="prestige" aria-expanded="true">
+								Prestige       
+								<img src="prestige.bmp" id="img-resize">
+							</a>
+						</li>
+						<li role="presentation" class="">
+							<a href="#achievements" id="achievements-tab" role="tab" data-toggle="tab" aria-controls="achievements" aria-expanded="true">
+								Achievements     
+								<img src="achivement.bmp" id="img-resize">
+							</a>
+						</li>
+						<li role="presentation" class="">
+							<a href="#stats" id="stats-tab" role="tab" data-toggle="tab" aria-controls="stats" aria-expanded="true">
+								Stats
+								<img src="stats.bmp" id="img-resize">
+							</a>
+						</li>
+						<li role="presentation" class="">
+							<a href="#options" id="options-tab" role="tab" data-toggle="tab" aria-controls="options" aria-expanded="true">
+								Options
+								<!--img src="options.bmp" id="img-resize"-->
+								<i class="fa fa-lg fa-cog fa-spin" style="color: black; position: relative; top: -1px;font-size: 1.4em;"></i>
+							</a>
+						</li>
+					</ul>
+					<div id="myTabContent" class="tab-content">
+
+						<!-- Main Game Tab -->
+
+						<div role="tabpanel" class="tab-pane fade active in" id="mainGame" aria-labelledby="mainGame-tab">
+							<div class="row">
+								<div class="col-lg-2"></div>
+								<div class="col-lg-2" id="statDisplay">
+									<div id="statDisplayHead">Player Stats</div>
+									<div name="money">Money : $0</div>
+									<div name="power">Power : 0 / 100</div>
+								</div>
+								<div class="col-lg-2"></div>
+								<div class="col-lg-4" id="statDisplay">
+									<div id="statDisplayHead">Player Actions</div>
+									<div name="sellPower">
+										<p></p>
+										<input type="button" value="Sell Power" name="sellPowerBtn" class="btn btn-default" onclick="GameInstance.sellPower();"></input>
+										<p></p>
+									</div>
+									<div name="steamSlider">
+										<p name="currentSteam">Current Steam Input : 100mb/t</p>
+										<div id="slider"></div>
+										<p></p>
+										<p name="maxSteam">Max Steam Input : 2000mb/t</p>
+									</div>
+								</div>
+								<div class="col-lg-2"></div>
+							</div>
+							</br>
+							<div id="slider1_container" style="position: relative; top: 0px; left: 0px; min-width: 100%; height: 600px;">
+								<!-- Slides Container -->
+								<div u="slides" name="itemStorage" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px;min-width: 100%; height: 600px;">
+									<div name="item1" id="gameDisplayNoRight">Item 1</div>
+									<div name="item2" id="gameDisplayMiddle">Item 2</div>
+									<div name="item3" id="gameDisplayNoLeft">Item 3</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Upgrades Tab -->
+
+						<div role="tabpanel" class="tab-pane fade" id="upgrades" aria-labelledby="upgrades-tab">
+							<p>This is where the upgrades will be.</p>
+						</div>
+
+						<!-- Prestige Tab -->
+
+						<div role="tabpanel" class="tab-pane fade" id="prestige" aria-labelledby="prestige-tab">
+							<p>This is where the prestige will be.</p>
+						</div>
+
+						<!-- Achivements Tab -->
+
+						<div role="tabpanel" class="tab-pane fade" id="achievements" aria-labelledby="achievements-tab">
+							<p>This is where the achievements will be.</p>
+						</div>
+
+						<!-- Stats Tab -->
+
+						<div role="tabpanel" class="tab-pane fade" id="stats" aria-labelledby="stats-tab">
+							<p>This is where the stats will be.</p>
+							<div class="col-lg-5" id="statDisplayL">
+								<div id="statDisplayHead">Current Stats</div>
+								<div name="currentMoney">Current Money : 0</div>
+								<div name="totalMoney">Total Money Earned : 0</div>
+							</div>
+							<div class="col-lg-2"></div>
+							<div class="col-lg-5" id="statDisplayL">
+								<div id="statDisplayHead">Prestige Stats</div>
+								<div name="steamPoints">Steam Points : 0</div>
+								<div name="slots">Slots : 2</div>
+							</div>
+						</div>
+
+						<!-- Options Tab  -->
+
+						<div role="tabpanel" class="tab-pane fade" id="options" aria-labelledby="options-tab">
+							<div class="col-lg-5" id="statDisplay">
+								<div id="statDisplayHead">Load/Save Options</div>
+								</br>
+								<div><input type="button" value="Save Game" class="btn btn-default" onClick="GameInstance.saveCheck();"/></div>
+								</br>
+								<div><input type="button" value="Load Game" class="btn btn-default" onClick="GameInstance.loadCheck();"/></div>
+								</br>
+								<div><input type="button" value="Reset Game including Save" class="btn btn-default" onClick="GameInstance.resetGameCheck();"/></div>
+								</br>
+								<div id="statDisplayHead">Do you want to convert your game save into text?</div>
+								</br>
+								<div><input type="button" value="Get text" class="btn btn-default" onClick="GameInstance.displayText();"/></div>
+								</br>
+								<div id="statDisplayHead">Fo you want to load your game save from text?</div>
+								</br>
+								<div><input type="button" value="Load game from text" class="btn btn-default" onClick="GameInstance.loadFromText();"/></div>
+								</br>
+							</div>
+							<div class="col-lg-2"></div>
+							<div class="col-lg-5" id="statDisplay">
+								<div id="statDisplayHead">Prestige Options</div>
+								</br>
+								<div><input type="button" value="Reset (Steam Points 10023)" class="btn btn-default" /></div>
+								</br>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-2"></div>
+		</div>
+
+		<script>				
+			$(function() {
+				$( "#slider" ).slider({
+					slide: function( event, ui ) {checkSlider( event, ui);},
+					change: function( event, ui ) {checkSlider( event, ui);},
+					value: 100,
+					max: 2000
+				});
+				var options = { $AutoPlay: false, $SpacingY: 100, $SpacingX: 100 };
+        		var jssor_slider1 = new $JssorSlider$('slider1_container', options);
+			});
+		</script>
+	</body>
+</html>

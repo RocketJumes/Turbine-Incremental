@@ -1,0 +1,47 @@
+Turbine Incremental
+
+You start off with two slots.
+
+You are able to view theses slots on a carousel
+
+One will be a coil and the other one will be fans.
+
+When viewing each slot you will have different upgrade options, 
+for example if you were viewing the slot with fans it will let you change the amount of fans there are in that slot. 1 - 4
+Another example if you were viewing the slot with a coil it will let you change what material to increase how much power you get.
+
+Material ideas.
+ - Carbon
+ - Silver
+ - Copper
+ - Gold
+ - Aluminium
+ - Tungsten
+ - Nickel
+ - Lithium
+ - Iron
+ - Platinum
+ - Lead 
+ - Manganin
+ - Nichrome
+ - Teflon
+
+You are able to control the amount of steam that flows through the turbine, if you were to increase the amount of steam that flows through the turbine, you will increase
+the fan speed. If the fan speed gets above a threshold then the turbine will start to become unstable. If the stablity of the turbine goes to 0% the turbine will be destroyed.
+
+The better the material the more power that will be generated, 
+
+
+
+--------------------- Dev shit ---------------------
+
+Always update a variable with the current fan speed. By looking at the amount of fans and the amount of steam, and the amount of coils.
+
+More fans = more rotations
+
+Higher conductivity = more power
+
+1 tick = 1000 seconds to start with.
+
+Every tick do a calculation. That takes the conductivity of the item 
+

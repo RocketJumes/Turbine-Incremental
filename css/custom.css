@@ -1,0 +1,72 @@
+#img-resize {
+	position: relative;
+	top: -1px; 
+	max-height: 16px;
+}
+
+#statDisplay {
+	top: 10px;
+	border: 4px solid red;
+	border-radius: 10px;
+	background-color: orange;
+	text-align: center;
+	min-height: 100px;
+}
+
+#statDisplayL {
+	top: 10px;
+	border: 4px solid red;
+	border-radius: 10px;
+	background-color: orange;
+	text-align: left;
+	min-height: 100px;
+}
+
+#statDisplayHead {
+	border-bottom: 4px solid red;
+	border-radius: 4px;
+	padding-top: 5px;
+}
+
+#gameDisplayNoLeft {
+	position: right;
+	border: 4px solid red;
+	border-radius: 10px;
+	border-left: 4px solid red;
+	background-color: orange;
+	text-align: center;
+	min-height: 100px;
+	max-width: 99.5%;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
+
+#gameDisplayNoRight {
+	position: left;
+	border: 4px solid red;
+	border-radius: 10px;
+	border-right: 4px solid red;
+	background-color: orange;
+	text-align: center;
+	min-height: 100px;
+	max-width: 99%;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+#gameDisplayMiddle {
+	position: left;
+	border: 4px solid red;
+	border-radius: 10px;
+	border-right: 4px solid red;
+	border-left: 4px solid red;
+	background-color: orange;
+	text-align: center;
+	min-height: 100px;
+	max-width: 99%;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
