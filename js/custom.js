@@ -6,7 +6,7 @@ function checkSlider( event, ui ) {
 	if (ui.value > Stuff.maxSteamInput) {
 		console.log('Wrong value on the slider');
 		$('#slider').slider('value',Stuff.maxSteamInput);
-		temp = GameInstance.gameInfo.maxSteamInput;
+		temp = Stuff.maxSteamInput;
 		$('#slider').slider('option','max',Stuff.maxSteamInput);
 	}
 	if (ui.value < 0) {
